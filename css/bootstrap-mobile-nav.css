@@ -6,8 +6,8 @@
  * http://opensource.org/licenses/MIT
  * 
  * Author: Adam J De Lucia
- * Version: 1.0.1
- * Date: May 5, 2015
+ * Version: 1.1.0
+ * Date: May 7, 2015
  * 
  * Example of the scaffolding to use with Bootstrap Mobile Nav's default settings:
  * 
@@ -38,14 +38,14 @@
     margin: 0;
     z-index: 1045;
   }
-  .navbar-collapse.collapse.in #mobile-nav li {
-    height: 33.33333333%;
-    border-bottom: solid 1px #1d4857;
-  }
-  .navbar-collapse.collapse.in #mobile-nav li:first-child a {
+  .navbar-collapse.collapse.in #mobile-nav > li:first-child a {
     -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
+  }
+  .navbar-collapse.collapse.in #mobile-nav li {
+    height: 20%;
+    border-bottom: solid 1px #1d4857;
   }
   .navbar-collapse.collapse.in #mobile-nav li.last-nav-btn {
     border: none 0;
@@ -55,11 +55,40 @@
     -moz-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
   }
+  .navbar-collapse.collapse.in #mobile-nav li.last-nav-btn.dropdown ul.dropdown-menu a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .navbar-collapse.collapse.in #mobile-nav li.last-nav-btn.dropdown ul.dropdown-menu li:last-child a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+  }
+  .navbar-collapse.collapse.in #mobile-nav li.dropdown > a.dropdown-toggle {
+    display: none;
+  }
+  .navbar-collapse.collapse.in #mobile-nav li.dropdown ul.dropdown-menu {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border: none 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-collapse.collapse.in #mobile-nav li.dropdown ul.dropdown-menu li:last-child {
+    border-bottom: none 0;
+  }
   .navbar-collapse.collapse.in #mobile-nav li .nav-btn {
     position: relative;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 44px;
+    font-size: 26px;
     color: #ffffff;
     text-transform: uppercase;
     background-color: #307890;
@@ -75,20 +104,20 @@
     top: 50%;
     right: 0;
     left: 0;
-    line-height: 44px;
+    line-height: 26px;
     text-align: center;
-    margin-top: -22px;
+    margin-top: -13px;
   }
 }
 @media (max-width: 767px) and (orientation: landscape) {
   .navbar-collapse.collapse.in #mobile-nav li .nav-btn {
-    font-size: 32px;
+    font-size: 19px;
   }
 }
 @media (max-width: 767px) and (orientation: landscape) {
   .navbar-collapse.collapse.in #mobile-nav li .nav-btn span {
-    line-height: 32px;
-    margin-top: -16px;
+    line-height: 19px;
+    margin-top: -10px;
   }
 }
 #nav-btn-out {
@@ -118,4 +147,4 @@
   display: block;
   padding: 0;
 }
-/*# sourceMappingURL=bootstrap.mobile-nav.css.map */
+/*# sourceMappingURL=bootstrap-mobile-nav.css.map */
