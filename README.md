@@ -1,4 +1,4 @@
-Bootstrap-MobileNav
-============
+Bootstrap 3 Mobile Nav
+======================
 
-Bootstrap Mobile Nav extends Bootstrap 3 navbar scaffolding in the mobile state to provide a clickable, full-screen navigation menu. The included LESS file computes all size parameters from a customizable navigation link count.
+Mobile Nav is an extension of the popular Bootstrap 3 framework. It provides a full screen menu with a larger click area in the mobile state to enhance the user experience. The provided LESS source sets a baseline for menu size computed from a customizable link count variable.
