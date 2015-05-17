@@ -6,19 +6,9 @@
  * http://opensource.org/licenses/MIT
  * 
  * Author: Adam J De Lucia
- * Version: 1.1.0
- * Date: May 7, 2015
+ * Version: 1.1.1
+ * Date: May 17, 2015
  * 
- * Example of the scaffolding to use with Bootstrap Mobile Nav's default settings:
- * 
- * <div class="collapse navbar-collapse">
- *     <ul id="mobile-nav">
- *         <li><a class="nav-btn" href="#"><span>Link 1</span></a></li>
- *         <li><a class="nav-btn" href="#"><span>Link 2</span></a></li>
- *         <li class="last-nav-btn"><a class="nav-btn" href="#"><span>Link 3</span></a></li>
- *         <li id="nav-btn-out"><a href="#">&times;</a></li>
- *     </ul>
- * </div>
  */
 @media (max-width: 767px) {
   #mobile-nav {
