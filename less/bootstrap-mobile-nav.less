@@ -7,8 +7,8 @@
  * http://opensource.org/licenses/MIT
  * 
  * Author: Adam J De Lucia
- * Version: 1.1.1
- * Date: May 17, 2015
+ * Version: 1.2.0
+ * Date: November 8, 2015
  * 
  */
 
@@ -18,7 +18,7 @@
 @mobile-nav-id: mobile-nav; // id - #
 @mobile-nav-btn: nav-btn; // class - .
 @mobile-nav-btn-last: last-nav-btn; // class - .
-@close-mobile-nav: nav-btn-out; // id - #
+@mobile-nav-close: nav-btn-out; // id - #
 
 
 // Link styles and dynamic sizing
@@ -27,9 +27,11 @@
 @mobile-nav-link-sizing-adjust: @mobile-nav-link-sizing * 0.72;
 @mobile-nav-theme-font: Arial, Helvetica, sans-serif;
 @mobile-nav-theme-color: rgb(48,120,144);
+@mobile-nav-theme-hover-color: darken(@mobile-nav-theme-color, 12%);
 @mobile-nav-theme-text-color: #fff;
+@mobile-nav-theme-close-color: darken(@mobile-nav-theme-color, 15%);
 @mobile-nav-menu-radius: 4px; // single number with units
-@close-mobile-nav-radius: 100px; // single number with units
+@mobile-nav-close-radius: 100%; // single number with units
 
 @media (max-width: @mobile-nav-max-breakpoint) {
     #@{mobile-nav-id} {
@@ -131,7 +133,7 @@
                     padding: 0;
 
                     &:hover, &:focus {
-                        color: darken(@mobile-nav-theme-color, 12%);
+                        color: @mobile-nav-theme-hover-color;
                     }
 
                     // Vertical centering of link text
@@ -167,7 +169,7 @@
 }
 
 // Style for close nav menu button
-#@{close-mobile-nav} {
+#@{mobile-nav-close} {
     position: fixed;
     top: 12px;
     right: 50px;
@@ -183,15 +185,21 @@
         width: 32px;
         height: 32px;
         font-size: 3em;
-        color: darken(@mobile-nav-theme-color, 15%);
+        color: @mobile-nav-theme-close-color;
         line-height: 32px;
+        text-decoration: none;
         text-align: center;
         background-color: #fff;
-        -webkit-border-radius: @close-mobile-nav-radius;
-        -moz-border-radius: @close-mobile-nav-radius;
-        border-radius: @close-mobile-nav-radius;
+        -webkit-border-radius: @mobile-nav-close-radius;
+        -moz-border-radius: @mobile-nav-close-radius;
+        border-radius: @mobile-nav-close-radius;
         display: block;
         padding: 0;
+
+        &:hover, &:focus {
+            color: @mobile-nav-theme-close-color;
+            text-decoration: none;
+        }
     }
 }
 

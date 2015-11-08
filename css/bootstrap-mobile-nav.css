@@ -6,8 +6,8 @@
  * http://opensource.org/licenses/MIT
  * 
  * Author: Adam J De Lucia
- * Version: 1.1.1
- * Date: May 17, 2015
+ * Version: 1.2.0
+ * Date: November 8, 2015
  * 
  */
 @media (max-width: 767px) {
@@ -129,12 +129,17 @@
   font-size: 3em;
   color: #1d4857;
   line-height: 32px;
+  text-decoration: none;
   text-align: center;
   background-color: #fff;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
   display: block;
   padding: 0;
 }
-/*# sourceMappingURL=bootstrap-mobile-nav.css.map */
+#nav-btn-out a:hover,
+#nav-btn-out a:focus {
+  color: #1d4857;
+  text-decoration: none;
+}
