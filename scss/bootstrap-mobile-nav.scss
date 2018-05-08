@@ -14,42 +14,42 @@
 // CSS selector structure for scaffolding and media query breakpoints
 
 // Requires an id
-@mn-id: mobile-nav;
+$mn-id: mobile-nav;
 
 // Requires a class
-@mn-link: mn-link;
+$mn-link: mn-link;
 
 // Requires a class
-@mn-link-last-li: last-mn-link-li;
+$mn-link-last-li: last-mn-link-li;
 
 // Requires an id
-@mn-close: mn-close;
+$mn-close: mn-close;
 
-@mn-min-breakpoint: 768px;
-@mn-max-breakpoint: (@mn-min-breakpoint - 1);
+$mn-min-breakpoint: 768px;
+$mn-max-breakpoint: ($mn-min-breakpoint - 1);
 
 
 // Programmatic link sizing variable
-@mn-link-count: 9;
+$mn-link-count: 9;
 
 
 // Visual and typographical styling
-@mn-theme-font: Arial, Helvetica, sans-serif;
-@mn-link-sizing: 14rem / @mn-link-count;
-@mn-link-sizing-adjust: @mn-link-sizing * 0.7;
-@mn-theme-text-color: #fff;
-@mn-theme-box-color: #e82088;
-@mn-theme-hover-color: @mn-theme-text-color;
-@mn-theme-close-color: #000;
+$mn-theme-font: Arial, Helvetica, sans-serif;
+$mn-link-sizing: 14rem / $mn-link-count;
+$mn-link-sizing-adjust: $mn-link-sizing * 0.7;
+$mn-theme-text-color: #fff;
+$mn-theme-box-color: #e82088;
+$mn-theme-hover-color: $mn-theme-text-color;
+$mn-theme-close-color: #000;
 
 // Enter a single number with unit
-@mn-menu-radius: 0;
+$mn-menu-radius: 0;
 
 // Enter a single number with unit
-@mn-close-radius: 100%;
+$mn-close-radius: 100%;
 
-@media (max-width: @mn-max-breakpoint) {
-    #@{mn-id} {
+@media (max-width: $mn-max-breakpoint) {
+    ##{$mn-id} {
         display: none;
     }
 
@@ -59,7 +59,7 @@
         overflow: visible;
 
         // Style for mobile nav when shown
-        #@{mn-id} {
+        ##{$mn-id} {
             position: fixed;
             top: 25px;
             right: 20px;
@@ -70,50 +70,50 @@
             z-index: 1045;
 
             // Style for list items except dropdowns and mobile nav close
-            li:not(#@{mn-close}):not(.dropdown) {
-                border-bottom: solid 1px darken(@mn-theme-box-color, 15%);
+            li:not(##{$mn-close}):not(.dropdown) {
+                border-bottom: solid 1px darken($mn-theme-box-color, 15%);
             }
 
             // Style for link height computation
-            > li:not(#@{mn-close}) {
+            > li:not(##{$mn-close}) {
                 width: 100%;
-                height: 100% / @mn-link-count;
+                height: 100% / $mn-link-count;
                 display: table;
             }
 
             // Style for first link in menu
             > li:first-child a {
-                -webkit-border-radius: @mn-menu-radius @mn-menu-radius 0 0;
-                -moz-border-radius: @mn-menu-radius @mn-menu-radius 0 0;
-                border-radius: @mn-menu-radius @mn-menu-radius 0 0;
+                -webkit-border-radius: $mn-menu-radius $mn-menu-radius 0 0;
+                -moz-border-radius: $mn-menu-radius $mn-menu-radius 0 0;
+                border-radius: $mn-menu-radius $mn-menu-radius 0 0;
             }
 
             // Style for last link in menu
-            > li.@{mn-link-last-li} {
+            > li.#{$mn-link-last-li} {
                 border: none 0;
 
                 a {
-                    -webkit-border-radius: 0 0 @mn-menu-radius @mn-menu-radius;
-                    -moz-border-radius: 0 0 @mn-menu-radius @mn-menu-radius;
-                    border-radius: 0 0 @mn-menu-radius @mn-menu-radius;
+                    -webkit-border-radius: 0 0 $mn-menu-radius $mn-menu-radius;
+                    -moz-border-radius: 0 0 $mn-menu-radius $mn-menu-radius;
+                    border-radius: 0 0 $mn-menu-radius $mn-menu-radius;
                 }
             }
 
             // Style for menu links
-            li .@{mn-link} {
-                font-family: @mn-theme-font;
-                font-size: @mn-link-sizing;
-                color: @mn-theme-text-color;
+            li .#{$mn-link} {
+                font-family: $mn-theme-font;
+                font-size: $mn-link-sizing;
+                color: $mn-theme-text-color;
                 text-transform: uppercase;
                 text-align: center;
-                background-color: @mn-theme-box-color;
+                background-color: $mn-theme-box-color;
                 display: table-cell;
                 vertical-align: middle;
                 padding: 0;
 
                 &:hover,
                 &:focus {
-                    color: @mn-theme-hover-color;
+                    color: $mn-theme-hover-color;
                 }
             }
 
@@ -127,7 +127,7 @@
 
                 // Show dropdown menu
                 .dropdown-menu {
-                    background: @mn-theme-box-color;
+                    background: $mn-theme-box-color;
                     border: none 0;
                     -webkit-box-shadow: none;
                     -moz-box-shadow: none;
@@ -155,10 +155,10 @@
             }
 
             // Style for last link in menu in a dropdown
-            > .@{mn-link-last-li}.dropdown .dropdown-menu {
+            > .#{$mn-link-last-li}.dropdown .dropdown-menu {
                 background: transparent;
 
-                > :last-child {
+                :last-child {
                     border-bottom: none 0 !important;
                 }
 
@@ -170,9 +170,9 @@
 
                 > a:last-child,
                 > :last-child a {
-                    -webkit-border-radius: 0 0 @mn-menu-radius @mn-menu-radius;
-                    -moz-border-radius: 0 0 @mn-menu-radius @mn-menu-radius;
-                    border-radius: 0 0 @mn-menu-radius @mn-menu-radius;
+                    -webkit-border-radius: 0 0 $mn-menu-radius $mn-menu-radius;
+                    -moz-border-radius: 0 0 $mn-menu-radius $mn-menu-radius;
+                    border-radius: 0 0 $mn-menu-radius $mn-menu-radius;
                 }
             }
         }
@@ -180,15 +180,15 @@
 }
 
 // Font sizing to fit nav to orientation
-.navbar-collapse.collapse.in #@{mn-id} li .@{mn-link},
-.navbar-collapse.collapse.show #@{mn-id} li .@{mn-link} {
-    @media (max-width: @mn-max-breakpoint) and (orientation: landscape) {
-        font-size: @mn-link-sizing-adjust;
+.navbar-collapse.collapse.in ##{$mn-id} li .#{$mn-link},
+.navbar-collapse.collapse.show ##{$mn-id} li .#{$mn-link} {
+    @media (max-width: $mn-max-breakpoint) and (orientation: landscape) {
+        font-size: $mn-link-sizing-adjust;
     }
 }
 
 // Style for close nav menu button
-#@{mn-close} {
+##{$mn-close} {
     position: fixed;
     top: 12px;
     right: 50px;
@@ -197,7 +197,7 @@
     display: table;
     z-index: 1050;
 
-    @media (min-width: @mn-min-breakpoint) {
+    @media (min-width: $mn-min-breakpoint) {
         display: none;
     }
 
@@ -206,45 +206,45 @@
         font-size: 40px;
         line-height: 0;
         font-weight: 300;
-        color: @mn-theme-close-color;
+        color: $mn-theme-close-color;
         text-align: center;
         background-color: #fff;
-        -webkit-border-radius: @mn-close-radius;
-        -moz-border-radius: @mn-close-radius;
-        border-radius: @mn-close-radius;
+        -webkit-border-radius: $mn-close-radius;
+        -moz-border-radius: $mn-close-radius;
+        border-radius: $mn-close-radius;
         display: table-cell;
 
         &:hover,
         &:focus {
             text-decoration: none;
-            color: @mn-theme-close-color;
+            color: $mn-theme-close-color;
         }
     }
 }
 
-.in #@{mn-close} a {
-    @media (max-width: @mn-max-breakpoint) {
+.in ##{$mn-close} a {
+    @media (max-width: $mn-max-breakpoint) {
         vertical-align: middle;
         padding: 0;
     }
 }
 
-.show #@{mn-close} a {
-    @media (max-width: @mn-max-breakpoint) {
+.show ##{$mn-close} a {
+    @media (max-width: $mn-max-breakpoint) {
         vertical-align: top;
         padding: 12px 0 0;
     }
 }
 
 // Mixin for dropdowns in mobile nav
-.mn-dropdown(@dropdown-link-count) {
-    @media (max-width: @mn-max-breakpoint) {
-        height: (100% / @mn-link-count) * @dropdown-link-count !important;
+@mixin mn-dropdown($dropdown-link-count) {
+    @media (max-width: $mn-max-breakpoint) {
+        height: (100% / $mn-link-count) * $dropdown-link-count !important;
 
         ul.dropdown-menu > li {
             width: 100%;
-            height: 100% / @dropdown-link-count !important;
-            border-bottom: solid 1px darken(@mn-theme-box-color, 15%);
+            height: 100% / $dropdown-link-count !important;
+            border-bottom: solid 1px darken($mn-theme-box-color, 15%);
             display: table;
         }
 
@@ -255,7 +255,7 @@
             -ms-flex-direction: column;
             flex-direction: column;
             justify-content: space-around;
-            border-bottom: solid 1px darken(@mn-theme-box-color, 15%);
+            border-bottom: solid 1px darken($mn-theme-box-color, 15%);
         }
     }
 }
