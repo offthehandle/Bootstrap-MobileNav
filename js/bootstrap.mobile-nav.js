@@ -1,3 +1,16 @@
+/*
+ * Mobile Nav with support for Twitter Bootstrap 3 & 4
+ * 
+ * Description: Mobile Nav is a Bootstrap extension that provides a better, fat finger free UX in the mobile state.
+ * 
+ * Copyright (c) 2015 - 2018 Adam J. De Lucia
+ * Licensed under the MIT License.
+ * http://opensource.org/licenses/MIT
+ * 
+ * Author: Adam J. De Lucia
+ * Version: 2.0.0
+ * Date: May 9, 2018
+ */
 var MobileNavDefaultSettings = (function () {
     function MobileNavDefaultSettings() {
         this.settings = {
